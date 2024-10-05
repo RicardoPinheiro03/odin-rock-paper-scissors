@@ -19,4 +19,4 @@ let getComputerChoice = () => {
 }
 
 let resultFromCPUComputation = document.getElementById("computerResult");
-resultFromCPUComputation.textContent = getComputerChoice();
+resultFromCPUComputation.textContent = "Computer result is: " + getComputerChoice();
