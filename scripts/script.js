@@ -18,5 +18,33 @@ let getComputerChoice = () => {
     return result;
 }
 
+
+/**
+ * 
+ * @returns humanChoice
+ */
+let getHumanChoice = () => {
+    let humanPrompt = prompt("What is your guess?");
+    let humanChoice;
+    console.log("Second time?");
+    switch(humanPrompt) {
+        case "rock":
+            humanChoice = "rock";
+            break;
+        case "paper":
+            humanChoice = "paper";
+            break;
+        case "scissors":
+            humanChoice = "scissors";
+            break;
+        default:
+            alert("Please enter a valid value! \n Valid values are: rock, paper, scissors.");
+            getHumanChoice();
+            break;
+    }    
+    return humanChoice;
+} // Still has a bug if we choose a different input than the accepted ones.
+
+
 let resultFromCPUComputation = document.getElementById("computerResult");
 resultFromCPUComputation.textContent = "Computer result is: " + getComputerChoice();
